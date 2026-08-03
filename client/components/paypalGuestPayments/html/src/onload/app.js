@@ -28,7 +28,7 @@ async function onPayPalWebSdkLoaded() {
     const clientId = await getBrowserSafeClientId();
     const sdkInstance = await window.paypal.createInstance({
       clientId,
-      components: ["paypal-guest-payments"],
+      components: ["paypal-guest-payments","applepay-payments"],
     });
 
     const eligiblePaymentMethods = await sdkInstance.findEligibleMethods({
