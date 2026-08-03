@@ -25,7 +25,7 @@ try {
   const clientId = await getBrowserSafeClientId();
   const sdkInstance = await paypalGlobalNamespace.createInstance({
     clientId,
-    components: ["paypal-payments"],
+    components: ["paypal-payments","applepay-payments"],
     pageType: "checkout",
   });
 
